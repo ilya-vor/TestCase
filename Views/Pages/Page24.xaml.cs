@@ -3,11 +3,11 @@ using Wpf.Ui.Abstractions.Controls;
 
 namespace TestCase.Views.Pages
 {
-    public partial class Page23 : INavigableView<ViewModel23>
+    public partial class Page24 : INavigableView<ViewModel24>
     {
-        public ViewModel23 ViewModel { get; }
+        public ViewModel24 ViewModel { get; }
 
-        public Page23(ViewModel23 viewModel)
+        public Page24(ViewModel24 viewModel)
         {
             ViewModel = viewModel;
             DataContext = this;

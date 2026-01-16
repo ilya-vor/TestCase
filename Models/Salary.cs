@@ -15,12 +15,10 @@ namespace TestCase.Models
         [XmlAttribute("mount")]
         public string Month { get; set; }
 
-        // Свойство для получения суммы как числа
         public decimal Amount
         {
             get
             {
-                // Заменяем запятую на точку для корректного парсинга
                 var normalized = AmountString.Replace(',', '.');
                 return decimal.Parse(normalized, System.Globalization.CultureInfo.InvariantCulture);
             }
