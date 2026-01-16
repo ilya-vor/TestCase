@@ -64,6 +64,8 @@ namespace TestCase
                 services.AddSingleton<ViewModel23>();
                 services.AddSingleton<Page24>();
                 services.AddSingleton<ViewModel24>();
+                services.AddSingleton<Page25>();
+                services.AddSingleton<ViewModel25>();
                 services.AddSingleton<SettingsPage>();
                 services.AddSingleton<SettingsViewModel>();
             }).Build();
