@@ -34,6 +34,7 @@
         Grid.Row="0"
         Margin="0,12"
         VerticalAlignment="Center"
+                TextWrapping="Wrap"
         Text="Реализовать добавление в файл Data1.xml данных для строки item с возможность пересчета всех данных (с 1 по 4 пункты)." />
 
             <StackPanel Orientation="Horizontal" Grid.Row="1">

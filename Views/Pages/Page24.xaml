@@ -29,6 +29,7 @@
             Grid.Row="0"
             Margin="0,12"
             VerticalAlignment="Center"
+            TextWrapping="Wrap"
             Text="Написать программу на языке C#, которая имеет GUI с кнопкой запуска программы и отображением списка всех Employee и сумму всех выплат (amount) по месяцам (mount)." />
 
         <ui:Button
