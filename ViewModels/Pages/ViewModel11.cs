@@ -1,5 +1,8 @@
-﻿using System.ComponentModel;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System.ComponentModel;
 using System.Diagnostics;
+using TestCase.Services.File;
+using TestCase.Services.Xml;
 
 namespace TestCase.ViewModels.Pages
 {
@@ -12,24 +15,8 @@ namespace TestCase.ViewModels.Pages
         public void OnOpenFile()
         {
             string filePath = "Resources\\Transforms\\TransformToEmployees.xslt";
-
-            try
-            {
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = filePath,
-                    UseShellExecute = true,
-                    Verb = "open"
-                });
-            }
-            catch (Win32Exception ex)
-            {
-                MessageBox.Show($"Не найдена программа для открытия файла: {ex.Message}");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка: {ex.Message}");
-            }
+            var FileService = App.Services.GetRequiredService<IFileService>();
+            FileService.OpenFile(filePath);
         }
     }
 }

@@ -5,6 +5,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TestCase.Services;
+using TestCase.Services.File;
+using TestCase.Services.Xml;
+using TestCase.Services.Xml.TestCase.Services.Xml;
 using TestCase.ViewModels.Pages;
 using TestCase.ViewModels.Windows;
 using TestCase.Views.Pages;
@@ -46,10 +49,17 @@ namespace TestCase
                 services.AddSingleton<INavigationWindow, MainWindow>();
                 services.AddSingleton<MainWindowViewModel>();
 
+                services.AddSingleton<IXmlService, XmlService>();
+                services.AddSingleton<IEmployeeDataService, EmployeeDataService>();
+
+                services.AddSingleton<IFileService, FileService>();
+
                 services.AddSingleton<Page11>();
                 services.AddSingleton<ViewModel11>();
                 services.AddSingleton<Page21>();
                 services.AddSingleton<ViewModel21>();
+                services.AddSingleton<Page22>();
+                services.AddSingleton<ViewModel22>();
                 services.AddSingleton<SettingsPage>();
                 services.AddSingleton<SettingsViewModel>();
             }).Build();

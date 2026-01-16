@@ -22,6 +22,12 @@ namespace TestCase.ViewModels.Windows
                 Content = "2.1",
                 Icon = new SymbolIcon { Symbol = SymbolRegular.DataHistogram24 },
                 TargetPageType = typeof(Views.Pages.Page21)
+            },
+            new NavigationViewItem()
+            {
+                Content = "2.2",
+                Icon = new SymbolIcon { Symbol = SymbolRegular.DataHistogram24 },
+                TargetPageType = typeof(Views.Pages.Page22)
             }
         };
 
